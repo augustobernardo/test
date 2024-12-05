@@ -1,0 +1,29 @@
+[2024-12-04T23:36:43.013+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-04T23:36:43.037+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.extract_data manual__2024-12-04T23:36:40.419217+00:00 [queued]>
+[2024-12-04T23:36:43.052+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.extract_data manual__2024-12-04T23:36:40.419217+00:00 [queued]>
+[2024-12-04T23:36:43.053+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-04T23:36:43.080+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extract_data> on 2024-12-04 23:36:40.419217+00:00
+[2024-12-04T23:36:43.097+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1081) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-04T23:36:43.101+0000] {standard_task_runner.py:72} INFO - Started process 1083 to run task
+[2024-12-04T23:36:43.100+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline', 'extract_data', 'manual__2024-12-04T23:36:40.419217+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpmodtbja3']
+[2024-12-04T23:36:43.103+0000] {standard_task_runner.py:105} INFO - Job 115: Subtask extract_data
+[2024-12-04T23:36:43.210+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_pipeline.extract_data manual__2024-12-04T23:36:40.419217+00:00 [running]> on host f697cea74b34
+[2024-12-04T23:36:43.559+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-04T23:36:40.419217+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-04T23:36:40.419217+00:00'
+[2024-12-04T23:36:43.561+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-04T23:36:43.562+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-04T23:36:43.563+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2024-12-04 23:36:43.038542+00:00
+[2024-12-04T23:36:43.564+0000] {logging_mixin.py:190} INFO - Dag name:etl_pipeline and current dag run status:running
+[2024-12-04T23:36:43.565+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-04T23:36:43.567+0000] {logging_mixin.py:190} INFO - Erro ao ler o arquivo: [Errno 2] No such file or directory: '/***/dados/data.csv'
+[2024-12-04T23:36:43.568+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-04T23:36:43.581+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-04T23:36:43.582+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_pipeline, task_id=extract_data, run_id=manual__2024-12-04T23:36:40.419217+00:00, execution_date=20241204T233640, start_date=20241204T233643, end_date=20241204T233643
+[2024-12-04T23:36:43.597+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-04T23:36:43.598+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-04T23:36:43.598+0000] {logging_mixin.py:190} INFO - Dag name:etl_pipeline queued_at:2024-12-04 23:36:40.454657+00:00
+[2024-12-04T23:36:43.599+0000] {logging_mixin.py:190} INFO - Task hostname:f697cea74b34 operator:PythonOperator
+[2024-12-04T23:36:43.642+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-04T23:36:43.672+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-04T23:36:43.676+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
